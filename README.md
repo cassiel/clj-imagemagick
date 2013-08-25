@@ -6,6 +6,13 @@ Some Clojure to manipulate images with [ImageMagick](http://www.imagemagick.org)
 
 ## Usage
 
+```clojure
+(binding
+    [c/*PATH* "/opt/local/bin/"]
+  (c/dimensions "/Users/nick/Dropbox/documents/portfolio/uncropped/aito.jpg"))
+```
+
+
 ## License
 
 Copyright © 2013 Nick Rothwell.
