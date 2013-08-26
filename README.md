@@ -8,14 +8,13 @@ Some Clojure to manipulate images with [ImageMagick](http://www.imagemagick.org)
 
 ```clojure
 (ns user
-  (:require (eu.cassiel.clj-images [core :as c])))
+  (:require (eu.cassiel.clj-im [core :as im])))
 
 (binding
-    [c/*PATH* "/opt/local/bin/"]
-  (c/dimensions "/Users/nick/Dropbox/documents/portfolio/uncropped/aito.jpg"))
+    [im/*PATH* "/opt/local/bin/"]
+  (im/dimensions "/Users/nick/Dropbox/documents/portfolio/uncropped/aito.jpg"))
 ;; => {:width 1680, :height 1050}
 ```
-
 
 ## License
 

@@ -1,4 +1,4 @@
-(ns eu.cassiel.clj-images.core
+(ns eu.cassiel.clj-im.core
   (:require (me.raynes [conch :as sh])))
 
 (def ^:dynamic *PATH* "")

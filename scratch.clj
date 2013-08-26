@@ -1,7 +1,7 @@
 (ns user
   (:require (me.raynes [conch :as sh])
-            (eu.cassiel.clj-images [core :as c])))
+            (eu.cassiel.clj-im [core :as im])))
 
 (binding
-    [c/*PATH* "/opt/local/bin/"]
-  (c/dimensions "/Users/nick/Dropbox/documents/portfolio/uncropped/aito.jpg"))
+    [im/*PATH* "/opt/local/bin/"]
+  (im/dimensions "/Users/nick/Dropbox/documents/portfolio/uncropped/aito.jpg"))
