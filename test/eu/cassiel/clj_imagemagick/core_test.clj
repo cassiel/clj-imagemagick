@@ -1,6 +1,6 @@
-(ns eu.cassiel.clj-im.core-test
+(ns eu.cassiel.clj-imagemagick.core-test
   (:use clojure.test
-        eu.cassiel.clj-im.core))
+        eu.cassiel.clj-imagemagick.core))
 
 (deftest a-test
   (testing "FIXME, I fail."

@@ -1,6 +1,6 @@
 `-*- word-wrap: t; -*-`
 
-# clj-images
+# clj-imagemagick
 
 Some Clojure to manipulate images with [ImageMagick](http://www.imagemagick.org), called via [Conch](https://github.com/Raynes/conch).
 
@@ -8,8 +8,12 @@ Some Clojure to manipulate images with [ImageMagick](http://www.imagemagick.org)
 
 ```clojure
 (ns user
-  (:require (eu.cassiel.clj-im [core :as im])))
+  (:require (eu.cassiel.clj-imagemagick [core :as im])))
+```
 
+Determine the dimensions of an image:
+
+```clojure
 (binding
     [im/*PATH* "/opt/local/bin/"]
   (im/dimensions "/Users/nick/Dropbox/documents/portfolio/uncropped/aito.jpg"))
