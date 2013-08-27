@@ -35,11 +35,28 @@
 
 (binding [im/*PATH* "/opt/local/bin/"]
   (let [root "/Users/nick/Dropbox/documents/portfolio/"]
-    (im/crop-aspect (str root "uncropped/aito.jpg")
-                    (str root "aito.jpg")
-                    :aspect 1
-                    :background "black"
-                    :gravity :northwest)))
+    (im/extend-aspect (str root "uncropped/aito.jpg")
+                      (str root "16x9/aito.jpg")
+                      :aspect 16/9
+                      :background "black"
+                      :gravity :center)))
+
+(binding [im/*PATH* "/opt/local/bin/"]
+  (let [root "/Users/nick/Dropbox/documents/portfolio/"]
+    (im/crop-aspect (str root "uncropped/toomortal.jpg")
+                    (str root "16x9/toomortal.jpg")
+                    :aspect 16/9
+                    :gravity :center)))
+
+(defn crop [f]
+  (binding [im/*PATH* "/opt/local/bin/"]
+    (let [root "/Users/nick/Dropbox/documents/portfolio/"]
+      (im/crop-aspect (str root "uncropped/" f)
+                      (str root "16x9/" f)
+                      :aspect 16/9
+                      :gravity :center))))
+
+(crop "cubewar.jpg")
 
 (binding [im/*PATH* "/opt/local/bin/"]
   (let [root "/Users/nick/Dropbox/documents/portfolio/"
@@ -55,5 +72,5 @@
     (im/border (str root "uncropped/aito.jpg")
                (str root "aito.jpg")
                :border-width 100
-               :border-height 50
+               :border-height 100
                :background "#808080")))

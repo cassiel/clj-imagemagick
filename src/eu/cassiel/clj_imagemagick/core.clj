@@ -50,10 +50,15 @@
   (let [border-width (or border-width 0)
         border-height (or border-height 0)
         background (or background "black")
-        {:keys [width height]} (dimensions in-file)]
+        {:keys [width height]} (dimensions in-file)
+        width' (+ width (* border-width 2))
+        height' (+ height (* border-height 2))
+        ]
     (convert in-file out-file
-             "-extent" (format "%dx%d"
-                               (+ width (* border-width 2))
-                               (+ height (* border-height 2)))
+             "-extent" (format "%dx%d" width' height')
              "-gravity" "center"
-             "-background" background)))
+             "-background" background)
+    {:original {:w width
+                :h height}
+     :final {:w (int width')
+             :h (int height')}}))
