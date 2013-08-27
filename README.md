@@ -2,7 +2,7 @@
 
 # clj-imagemagick
 
-Some Clojure to manipulate images with [ImageMagick](http://www.imagemagick.org), called via [Conch](https://github.com/Raynes/conch). Some of this code probably duplicates functionality in the more esoteric command line options, but I wanted to provide clear interfaces, and I prefer working with a Clojure REPL than the `bash` command line.
+Some Clojure to manipulate images with [ImageMagick](http://www.imagemagick.org), called via [Conch](https://github.com/Raynes/conch). Some of this code probably duplicates functionality in the more esoteric command line options, but I wanted to provide clear interfaces, and I prefer working with a Clojure REPL rather than the `bash` command line.
 
 ## Usage
 
